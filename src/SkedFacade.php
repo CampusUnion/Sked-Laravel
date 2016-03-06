@@ -2,7 +2,6 @@
 
 namespace CampusUnion;
 
-// use Aws\AwsClientInterface;
 use Illuminate\Support\Facades\Facade;
 
 /**
