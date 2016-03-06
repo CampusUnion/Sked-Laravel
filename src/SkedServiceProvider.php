@@ -34,9 +34,9 @@ class SkedServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('sked', function ($app) {
-            return new Sked($app['config']->get('sked'));
+            return new Sked\Sked($app['config']->get('sked'));
         });
-        $this->app->alias('sked', 'CampusUnion\Sked');
+        $this->app->alias('sked', 'CampusUnion\Sked\Sked');
     }
 
     /**
@@ -46,7 +46,7 @@ class SkedServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['sked', 'CampusUnion\Sked'];
+        return ['sked', 'CampusUnion\Sked\Sked'];
     }
 
 }

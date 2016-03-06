@@ -1,5 +1,5 @@
 # Sked-Laravel
-Laravel Service Provider for [Sked](https://github.com/CampusUnion/Sked).
+Laravel 5 Service Provider for [Sked](https://github.com/CampusUnion/Sked).
 
 ## Installation & Setup
 
@@ -27,7 +27,7 @@ Next, add the Sked Service Provider to the `providers` array in `config/app.php`
 ```php
     'providers' => [
         ...
-        'CampusUnion\SkedServiceProvider',
+        CampusUnion\SkedServiceProvider::class,
     ],
 ```
 
@@ -36,7 +36,7 @@ Add the Sked facade to the `aliases` array in `config/app.php`.
 ```php
     'aliases' => [
         ...
-        'Sked' => 'CampusUnion\SkedFacade',
+        'Sked' => CampusUnion\SkedFacade::class,
     ],
 ```
 
