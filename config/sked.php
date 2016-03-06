@@ -14,7 +14,7 @@ return [
     'data_connector' => [
         'name' => env('SKED_DC_NAME', 'PDO'),
         'options' => [
-            'type' => env('SKED_DC_TYPE', 'mysql'),
+            'driver' => env('SKED_DC_DRIVER', 'mysql'),
             'host' => env('SKED_DC_HOST', 'localhost'),
             'dbname' => env('SKED_DC_DBNAME', 'homestead'),
             'user' => env('SKED_DC_USER', 'homestead'),

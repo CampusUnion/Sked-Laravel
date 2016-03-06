@@ -44,12 +44,12 @@ Add the Sked facade to the `aliases` array in `config/app.php`.
 
 The following environment variables are used to configure Sked:
 ```
-SKED_DC_NAME
-SKED_DC_TYPE
-SKED_DC_HOST
-SKED_DC_DBNAME
-SKED_DC_USER
-SKED_DC_PASS
+SKED_DC_NAME=PDO
+SKED_DC_DRIVER=mysql
+SKED_DC_HOST=${DB_HOST}
+SKED_DC_DBNAME=${DB_DATABASE}
+SKED_DC_USER=${DB_USERNAME}
+SKED_DC_PASS=${DB_PASSWORD}
 ```
 
 ### Optional
