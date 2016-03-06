@@ -1,0 +1,26 @@
+{
+    "name": "campusunion/sked-laravel",
+    "type": "library",
+    "description": "Laravel Service Provider for Sked.",
+    "keywords": ["php","calendar","schedule"],
+    "homepage": "https://github.com/CampusUnion/Sked-Laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mark Potter",
+            "homepage": "https://github.com/mopo922"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "campusunion/sked": "0.*"
+    },
+    "require-dev": {
+        "laravel/framework": "~5.2"
+    },
+    "autoload": {
+        "psr-4" : {
+            "CampusUnion\\" : "src"
+        }
+    }
+}
