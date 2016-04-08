@@ -21,5 +21,6 @@ return [
             'pass' => env('SKED_DC_PASS', 'secret'),
         ],
     ],
+    'tags' => [],
 
 ];
