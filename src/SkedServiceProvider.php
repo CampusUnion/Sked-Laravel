@@ -2,6 +2,7 @@
 
 namespace CampusUnion;
 
+use Auth;
 use Illuminate\Support\ServiceProvider;
 
 /**
@@ -34,7 +35,13 @@ class SkedServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('sked', function ($app) {
-            return new Sked\Sked($app['config']->get('sked'));
+            $aConfig = $app['config']->get('sked');
+
+            // If the logged-in Laravel user has a timezone, use it!
+            if (Auth::check() && Auth::user()->timezone_offset)
+                $aConfig['data_connector']['options']['timezone_offset'] = Auth::user()->timezone_offset;
+
+            return new Sked\Sked($aConfig);
         });
         $this->app->alias('sked', 'CampusUnion\Sked\Sked');
     }
